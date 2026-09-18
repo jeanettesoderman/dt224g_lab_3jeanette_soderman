@@ -1,0 +1,135 @@
+/* 1. Grundinställningar */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  color: #444444;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 2. Sidans övergripande grid */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* 3. Header */
+header {
+  grid-area: header;
+  background-color: #26382f;
+}
+
+.header-inner {
+  padding: 1rem;
+}
+
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 90px;
+  height: auto;
+}
+
+/* 4. Huvudnavigation */
+header nav ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.hero-content {
+  padding: 1rem;
+}
+
+/* 5. Main */
+main {
+  grid-area: main;
+}
+
+/* introduktion */
+.intro {
+  padding: 1rem;
+}
+.button {
+  display: inline-block;
+  padding: 0.8rem;
+  background-color: #e6d3b3;
+  color: #26382f;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+}
+
+/* 6. Aktiviteter */
+.activity-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.activities {
+  padding: 1rem;
+}
+/* Avslutande sektion */
+.cta {
+  padding: 1rem;
+  background-color: #e6d3b3;
+}
+
+.cta .button {
+  background-color: #26382f;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+/* 7. Footer */
+footer {
+  grid-area: footer;
+  background-color: #26382f;
+  color: #ffffff;
+}
+.footer-inner {
+  padding: 1rem;
+}
+
+.footer-inner img {
+  width: 90px;
+  height: auto;
+}
+
+footer nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+/* 8. Större skärmar */
+@media (min-width: 768px) {
+  .activity-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
