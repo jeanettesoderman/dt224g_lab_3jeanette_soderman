@@ -100,7 +100,7 @@ main {
   border-radius: 8px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 /* Aktiviteter */
@@ -142,7 +142,7 @@ main {
   display: block;
   width: fit-content;
   margin: 1rem auto 0;
-  padding: 0.8rem 1 rem;
+  padding: 0.8rem 1rem;
   font-size: 0.8rem;
 }
 
@@ -167,13 +167,16 @@ footer {
 .footer-logo img {
   margin: 0 auto;
   width: 90px;
-  height: auto;
   margin: 0 auto;
+}
+
+.footer-contact,
+.footer-links {
+  flex: 1;
 }
 
 .footer-contact h2,
 .footer-links h2 {
-  flex: 1;
   font-size: 1rem;
   font-weight: 400;
   margin-top: 0;
