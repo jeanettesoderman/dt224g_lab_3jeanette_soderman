@@ -204,4 +204,13 @@ footer nav a {
   .activity-cards {
     grid-template-columns: repeat(3, 1fr);
   }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav ul {
+    grid-template-columns: repeat(4, auto);
+    gap: 2rem;
+  }
 }
