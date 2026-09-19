@@ -73,6 +73,14 @@ main {
 }
 
 /* Hero */
+.hero {
+  position: relative;
+}
+
+.hero > img {
+  width: 100%;
+}
+
 .hero-content {
   padding: 1rem;
 }
@@ -83,10 +91,11 @@ main {
   margin: 1rem auto 0;
 }
 
-/* introduktion */
+/* Introduktion */
 .intro {
   padding: 1rem;
 }
+
 .intro h2 {
   text-align: center;
 }
@@ -113,6 +122,7 @@ main {
 .activities {
   padding: 1rem;
 }
+
 .activities h2 {
   text-align: center;
 }
@@ -132,6 +142,7 @@ main {
   padding: 1rem;
   background-color: #e6d3b3;
 }
+
 .cta h2 {
   text-align: center;
 }
@@ -152,21 +163,22 @@ footer {
   background-color: #26382f;
   color: #ffffff;
 }
+
 .footer-inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 6rem;
-  padding: 2rem;
-  padding-top: 2rem 1rem 1rem;
+  gap: 2rem;
+  padding: 2rem 1rem 1rem;
 }
 
 .footer-logo {
   width: 100%;
   text-align: center;
 }
+
 .footer-logo img {
-  margin: 0 auto;
   width: 90px;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -182,6 +194,7 @@ footer {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
+
 .footer-contact {
   font-size: 0.8rem;
 }
@@ -201,16 +214,100 @@ footer nav a {
 
 /* Större skärmar */
 @media (min-width: 768px) {
+  /* Luft från sidorna på desktop */
+  .header-inner,
+  .activities,
+  .cta {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .intro {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Hero på större skärmar */
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .hero-content h1 {
+    color: #ffffff;
+  }
+
+  /* Aktiviteter på större skärmar */
   .activity-cards {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* Header på större skärmar */
   .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   header nav ul {
     grid-template-columns: repeat(4, auto);
     gap: 2rem;
+  }
+
+  /* Avslutande sektion på större skärmar */
+  .cta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .cta h2 {
+    text-align: left;
+  }
+
+  .cta .button {
+    margin: 0;
+    justify-self: center;
+  }
+
+  /* Footer på större skärmar */
+  .footer-inner {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .footer-logo,
+  .footer-contact,
+  .footer-links {
+    flex: 0 0 auto;
+  }
+
+  .footer-logo {
+    width: auto;
+    text-align: left;
+  }
+
+  .footer-logo img {
+    margin: 0;
+  }
+}
+
+/* Extra stora skärmar */
+@media (min-width: 1400px) {
+  .header-inner,
+  .activities,
+  .cta {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
